@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Data diri</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>G</title>
+            <style>
+                .profile-container {
+                    text-align: left;
+                    margin-top: 50px;
+                }
+        
+                .profile-image {
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 50%; /* Membuat gambar menjadi bulat */
+                    object-fit: cover; /* Menjaga proporsi gambar */
+                    border: 2px solid #ffffff; /* Memberi border */
+                }
+            </style>
+        </head>
+        <body>
+            <div class="profile-container">
+                <h1>Profil User</h1>
+                <img src="WWWW.jpg" alt="Foto Profil" class="profile-image">
+            </div>
+        </body>
+        </html>
+        <h1>Profil Mahasiswa</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showContent('biodata')">Biodata</a></li>
+            <li><a href="#" onclick="showContent('pendidikan')">Pendidikan</a></li>
+            <li><a href="#" onclick="showContent('pengalaman')">Pengalaman</a></li>
+            <li><a href="#" onclick="showContent('keahlian')">Keahlian</a></li>
+        </ul>
+    </nav>
+
+    <section id="Content">
+        <div id="biodata">
+        <h2>Biodata</h2>
+        <p><strong>NIM:</strong> 2023081022</p>
+        <p><strong>Nama:</strong>Oktavianus Pradipta Wiratama Putra</p>
+        <p><strong>Agama:</strong> Khatolik</p>
+        <p><strong>Tanggal Lahir:</strong> 24 Oktober 2005</p>
+        <p><strong>Tempat Lahir:</strong> Jakarta Selatan</p>
+    </div>
+    <div id="pendidikan" style="display:none;">
+        <h2>Pendidikan</h2>
+        <p><strong>SD:</strong> Strada Bhakti Utama</p>
+        <p><strong>Smp:</strong> Strada Bhakti Utama</p>
+        <p><strong>Sma:</strong> Virgo Fidelis Bawen</p>
+        <p><strong>Kuliah:</strong> Universitas Pembangunan jaya</p>
+    </div>
+    <div id="pengalaman" style="display:none;">
+        <h2>Pengalaman</h2>
+        <p>Barista 6 Bulan</p>
+        <p>Waitres 2 Bulan</p> 
+    </div>
+    <div id="keahlian" style="display:none;">
+        <h2>Keahlian</h2>
+        <p>bisa bernyanyi</p>
+        <p>Tegar menghadapi suatu masalah</p>
+    </div>
+    </section>
+
+    <aside>
+        <h2>Hobi</h2>
+        <ul>
+            <li>Bulu Tangkis</li>
+            <li>Bola</li>
+            <li>Bermain Games</li>
+            <li>Nonton film</li>
+        </ul>
+    </aside>
+
+    <footer>
+        <div class="footer-left">
+            <p>Twitter: Dibtaa</p>
+            <p>FB: Pradiptaa</p>
+            <p>Instagram: Dibtamaa_</p>
+        </div>
+        <div class="footer-right">
+            <p>This is my website welcome!</p>
+            <p>Hidup itu pahit kan yang manis mbak T</p>
+        </div>
+        <div class="footer-center">
+            <p>&copy; Copyright 2020. All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        function showContent(sectionId) {
+            document.getElementById('biodata').style.display = 'none';
+            document.getElementById('pendidikan').style.display = 'none';
+            document.getElementById('pengalaman').style.display = 'none';
+            document.getElementById('keahlian').style.display = 'none';
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>

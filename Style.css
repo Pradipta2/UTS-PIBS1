@@ -1,0 +1,312 @@
+/* Reset dan styling dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header styling */
+header {
+    background-image: url('P.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    color: #ffffff;
+}
+
+
+nav {
+    float: left;
+    width: 25%;
+    padding: 15px;
+    height: calc(100vh - 140px);
+    background-image: url('P.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    border-right: 1px solid rgba(255,255,255,0.2);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin-bottom: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Main content section styling */
+section {
+    float: left;
+    width: 50%;
+    padding: 20px;
+    height: calc(100vh - 140px);
+    background-color: rgba(0, 0, 0, 0.5); /* Darker overlay for better contrast */
+    background-image: url('Q.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    box-shadow: 0 0 20px red;
+    overflow-y: auto;
+    position: relative; /* For positioning the text overlay */
+}
+
+/* Text overlay */
+section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+    z-index: 1;
+}
+
+/* Ensure all content is above the overlay */
+section > * {
+    position: relative;
+    z-index: 2;
+    color: white; /* Light text color for better contrast */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8); /* Text shadow for better readability */
+}
+
+/* Additional styling for headings if needed */
+section h1, section h2, section h3 {
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Additional styling for paragraphs if needed */
+section p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+
+/* Aside styling */
+aside {
+    float: left;
+    width: 25%;
+    padding: 15px;
+    height: calc(100vh - 140px);
+    background-image: url('P.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    border-left: 1px solid rgba(255,255,255,0.2);
+}
+
+aside h2 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+aside ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+aside ul li {
+    margin-bottom: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+/* Footer styling */
+footer {
+    background-image: url('P.jpg');
+    background-size: cover;
+    background-position: bottom;
+    color: white;
+    clear: both;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Overlay for nav, aside, and footer */
+nav::before, aside::before, footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+/* Ensure content is above overlay */
+nav *, aside *, footer * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Content section styling */
+#Content > div {
+    display: none;
+}
+
+#Content > div#biodata {
+    display: block;
+}
+
+h2 {
+    color: #3498db; 
+    margin-bottom: 15px;
+}
+
+strong {
+    color: #eafb2f;
+}
+
+/* Responsive design */
+@media screen and (max-width: 1024px) {
+    /* Tablet Landscape */
+    nav, section, aside {
+        width: 33.33%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Tablet Portrait */
+    nav, section {
+        width: 48%;
+        float: left;
+        min-height: calc(100vh - 140px); /* Menyesuaikan tinggi minimum */
+    }
+    
+    section {
+        margin-left: 2%;
+    }
+    
+    aside {
+        width: 100%;
+        clear: both;
+        float: none;
+        height: auto;
+    }
+    
+    header h1 {
+        font-size: 2em;
+    }
+    
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    nav ul li {
+        margin: 5px;
+    }
+    
+    header, footer {
+        background-attachment: fixed;
+    }
+
+    /* Menjaga background tetap menutupi seluruh area */
+    nav, section, aside {
+        background-size: cover;
+        background-attachment: scroll; /* Memungkinkan background untuk di-scroll */
+    }
+
+    /* Wrapper untuk nav dan section */
+    .content-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* Memastikan tinggi nav dan section sama */
+    .content-wrapper::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Smartphone */
+    header h1 {
+        font-size: 1.5em;
+    }
+    
+    nav, section, aside {
+        width: 100%;
+        float: none;
+        clear: both;
+        margin-left: 0;
+        min-height: auto;
+    }
+    
+    .content-wrapper {
+        display: block;
+    }
+    
+    nav ul {
+        display: block;
+    }
+    
+    nav ul li {
+        width: 100%;
+        margin: 5px 0;
+    }
+    
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-left, .footer-right, .footer-center {
+        text-align: center;
+        padding: 5px 0;
+    }
+
+    body {
+        overflow: hidden;
+    }
+    
+}
